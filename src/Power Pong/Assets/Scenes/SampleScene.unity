@@ -572,8 +572,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9407c6b750b9e254e8d7c1634a94a7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Velocity>k__BackingField: {x: 1, y: 1}
-  <Speed>k__BackingField: 10
+  BounceMask:
+    serializedVersion: 2
+    m_Bits: 256
+  minimumExtent: 0.1
+  partialExtent: 0.1
+  sqrMinimumExtent: 0.1
+  <Velocity>k__BackingField: {x: 1, y: 0}
+  <CanMove>k__BackingField: 1
+  <Speed>k__BackingField: 100
 --- !u!50 &369588063
 Rigidbody2D:
   serializedVersion: 4
@@ -901,6 +908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 803713754}
+  - component: {fileID: 803713757}
   - component: {fileID: 803713753}
   - component: {fileID: 803713755}
   - component: {fileID: 803713756}
@@ -1024,6 +1032,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &803713757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803713752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f50162e2d9410747b874a9fbc57a96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014643084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1279,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363463399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
